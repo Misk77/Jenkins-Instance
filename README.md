@@ -6,6 +6,7 @@
 ### NOTES
 terraform version ">= 0.13"
 required_providers version = ">=3.21"
+terraform.tfvars - shouldnt be in the repo, but for easier understanding/usage its here
 
 
 DONT FOREGET THE aws key pem, if you want to ssh into the jenkins instance
