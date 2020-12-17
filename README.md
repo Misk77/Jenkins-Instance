@@ -22,3 +22,6 @@ keyname
 
 
 # Jenkins-Instance
+connection to Jenkins UI:
+[aws public ip]:8080
+- Then setup the Jenkins as you desire.
