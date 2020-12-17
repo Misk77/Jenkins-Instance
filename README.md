@@ -7,20 +7,20 @@
 terraform version ">= 0.13"
 required_providers version = ">=3.21"
 
-terraform.tfvars - shouldnt be in the repo, but for easier understanding/usage its here
-
 
 DONT FOREGET THE aws key pem, if you want to ssh into the jenkins instance
 
 # terraform.tfvars include this variable
-region
-environment
-vpc_cidr
-public_subnet_1_cidr
-private_subnet_1_cidr
-instance_type
-instance_ami
-keyname
+region               = "YOUR_REGION_OF_CHOICE"
+environment          = "ENV_NAME_OF_CHOICE"
+vpc_cidr             = "vpc_cidr_OF_CHOICE"
+public_subnet_1_cidr = "public_subnet_1_cidr_OF_CHOICE"
+
+private_subnet_1_cidr = "public_subnet_1_cidr_OF_CHOICE"
+
+instance_type = "instance_type_OF_CHOICE"
+instance_ami  = "instance_ami_OF_CHOICE"
+keyname       = "keyname_OF_CHOICE"
 
 
 # Jenkins-Instance
