@@ -30,8 +30,27 @@ resource "aws_instance" "jenkins-instance" {
   tags = {
     Name = "Jenkins-Instance"
   }
-}
 
+  connection {
+    type        = "ssh"
+    agent       = false
+    host        = self.public_ip
+    user        = "ec2-user"
+    private_key = file("~/FTP/AWS/private-key/tf-jenkins-aws.pem")
+    #timeout     = "10m"
+  }
+
+/*
+### THIS WE DONT USE!!, We create a independent AWS Solace instance instead! 
+  # Copy the app into ec2
+  provisioner "file" {
+    source      = "docker-compose-solace.yaml"
+    destination = "/home/ec2-user/docker-compose-solace.yml"
+  }
+
+*/
+
+}
 resource "aws_security_group" "sg_allow_ssh_jenkins" {
   name        = "allow_ssh_jenkins"
   description = "Allow SSH and Jenkins inbound traffic"

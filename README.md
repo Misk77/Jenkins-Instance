@@ -31,4 +31,6 @@ keyname       = "keyname_OF_CHOICE"
 # Jenkins-Instance
 connection to Jenkins UI:
 [aws public ip]:8080
+- For the Jenkins pw find it inside the aws instance: 
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 - Then setup the Jenkins as you desire.
