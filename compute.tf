@@ -40,7 +40,7 @@ resource "aws_instance" "jenkins-instance" {
     #timeout     = "10m"
   }
 
-/*
+  /*
 ### THIS WE DONT USE!!, We create a independent AWS Solace instance instead! 
   # Copy the app into ec2
   provisioner "file" {

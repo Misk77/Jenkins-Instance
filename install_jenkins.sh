@@ -8,6 +8,9 @@ echo ""
 echo "=== UPDATE Linux-2 ==="
 sudo yum update -y
 echo ""
+echo "=== Install git ==="
+sudo yum install git -y
+echo ""
 echo "=== INSTALL JAVA ==="
 sudo yum remove java -y
 sudo yum install java-1.8.0-openjdk -y
